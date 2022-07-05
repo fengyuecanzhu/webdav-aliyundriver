@@ -49,7 +49,7 @@ docker run -d --name=webdav-aliyundriver --restart=always -p 8080:8080  -v /etc/
 version: "3.0"
 services:
   webdav-aliyundriver:
-    image: zx5253/webdav-aliyundriver
+    image: fengyuecanzhu/webdav-aliyundriver
     container_name: aliyundriver
     environment:
       - TZ=Asia/Shanghai
