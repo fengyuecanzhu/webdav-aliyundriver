@@ -1,8 +1,8 @@
 version: '3'
 services:
-  # https://github.com/zxbu/webdav-aliyundriver
+  # https://github.com/fengyuecanzhu/webdav-aliyundriver
   webdav-aliyundriver:
-    image: zx5253/webdav-aliyundriver
+    image: fengyuecanzhu/webdav-aliyundriver
     container_name: webdav-aliyundriver
     restart: always
     volumes:
