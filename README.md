@@ -1,5 +1,5 @@
 
-说明：[1.1.0版本](https://github.com/zxbu/webdav-aliyundriver/releases/tag/v1.1.0)支持阿里Teambition网盘的webdav协议，后续的2.x版本仅支持阿里云盘，不再维护Teambition网盘版本
+说明：[1.1.0版本](https://github.com/fengyuecanzhu/webdav-aliyundriver/releases/tag/v1.1.0)支持阿里Teambition网盘的webdav协议，后续的2.x版本仅支持阿里云盘，不再维护Teambition网盘版本
 
 - [webdav-aliyundriver](#webdav-aliyundriver)
 - [如何使用](#如何使用)
@@ -30,14 +30,14 @@
 # 如何使用
 支持refreshToken登录方式，具体看参数说明
 ## Jar包运行
-[点击下载Jar包](https://github.com/zxbu/webdav-aliyundriver/releases/latest)
+[点击下载Jar包](https://github.com/fengyuecanzhu/webdav-aliyundriver/releases/latest)
 > 建议自己下载源码编译，以获得最新代码
 ```bash
 java -jar webdav.jar --aliyundrive.refresh-token="your refreshToken"
 ```
 ## 容器运行
 ```bash
-docker run -d --name=webdav-aliyundriver --restart=always -p 8080:8080  -v /etc/localtime:/etc/localtime -v /etc/aliyun-driver/:/etc/aliyun-driver/ -e TZ="Asia/Shanghai" -e ALIYUNDRIVE_REFRESH_TOKEN="your refreshToken" -e ALIYUNDRIVE_AUTH_PASSWORD="admin" -e JAVA_OPTS="-Xmx1g" zx5253/webdav-aliyundriver
+docker run -d --name=webdav-aliyundriver --restart=always -p 8080:8080  -v /etc/localtime:/etc/localtime -v /etc/aliyun-driver/:/etc/aliyun-driver/ -e TZ="Asia/Shanghai" -e ALIYUNDRIVE_REFRESH_TOKEN="your refreshToken" -e ALIYUNDRIVE_AUTH_PASSWORD="admin" -e JAVA_OPTS="-Xmx1g" fengyuecanzhu/webdav-aliyundriver
 
 # /etc/aliyun-driver/ 挂载卷自动维护了最新的refreshToken，建议挂载
 # ALIYUNDRIVE_AUTH_PASSWORD 是admin账户的密码，建议修改
