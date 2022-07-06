@@ -1,0 +1,24 @@
+name: build
+
+on:
+  push:
+    branches:
+      - main
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build With Maven
+      run: |
+          echo "开始编译打包"
+          chmod +x mvnw
+          mvn package -Dmaven.test.skip=true
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: webdav-aliyundriver
+          path: .\target\*.jar
