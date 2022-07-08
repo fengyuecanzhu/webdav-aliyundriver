@@ -30,8 +30,8 @@
 # 如何使用
 支持refreshToken登录方式，具体看参数说明
 ## Jar包运行
-[点击下载Jar包](https://github.com/fengyuecanzhu/webdav-aliyundriver/releases/latest)
-> 建议自己下载源码编译，以获得最新代码
+[点击下载Jar包](https://github.com/fengyuecanzhu/webdav-aliyundriver/actions/workflows/build.yml)
+> 也可自己下载源码编译
 ```bash
 java -jar webdav.jar --aliyundrive.refresh-token="your refreshToken"
 ```
